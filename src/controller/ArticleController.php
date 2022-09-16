@@ -23,7 +23,7 @@
         public function deleteArticle($request){           
             if(isset($request["supprimer"])){
                 $flag = CRUDFactory::getArticleCRUD()->delete($request["supprimer"]);
-                header("Location:articles");
+                $this->redirect("articles");
             }
         }
 

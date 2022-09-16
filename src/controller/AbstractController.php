@@ -2,9 +2,10 @@
 namespace App\Controller;
 use Config\Session;
 use Helpers\Exctractable;
+use Helpers\Redirect;
 
 abstract class AbstractController {
-    use Exctractable;
+    use Exctractable,Redirect;
     
     private $session;
 
@@ -27,11 +28,6 @@ abstract class AbstractController {
             "content"=>$html
         ];
         return $datas;
-    }
-
-
-    protected function redirect($link){
-        header("Location:$link");
     }
 
     /**

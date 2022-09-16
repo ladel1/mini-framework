@@ -1,5 +1,6 @@
  {
    "APP_NAME":"Blog Dev",
+   "ENV":"dev",
    "BASE_DIR":"C:/wamp64/www/mini-framework/",
    "CONTEXT_PATH":"/mini-framework/",
    "ROUTES":"config/routes.json",

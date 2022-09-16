@@ -33,7 +33,7 @@ class RegisterController extends AbstractController{
                     // insert user
                     CRUDFactory::getUserCRUD()->insert($user);
                     // redirect to login
-                    header("Location:login");
+                    $this->redirect("login");
                 }catch(Exception $e){
                     $error = $e->getMessage();
                 }
