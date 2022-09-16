@@ -15,7 +15,7 @@
             return $this->renderView("article/add-article",[],"Ajouter un article");
         } 
 
-        public function getArticles(){
+        public function getArticles(){  
             $articles = CRUDFactory::getArticleCRUD()->selectAll();         
             return $this->renderView("article/articles",compact("articles"),"Articles");
         }

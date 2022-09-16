@@ -5,19 +5,20 @@ use App\Model\User;
 class UserCRUD extends CRUD{
 
     public function insert(User $user){      
-        define("INSERT_USER","
-                    INSERT INTO `users`( `prenom`, `nom`, `email`, `password`, `ip`, `user_agent`) 
-                    VALUES (:prenom,:nom,:email,:password,:ip,:userAgent)
-        ");
-        $stmt = $this->db->prepare(INSERT_USER);
-        $stmt->bindValue(":prenom",$user->getPrenom());
-        $stmt->bindValue(":nom",$user->getNom());
-        $stmt->bindValue(":email",$user->getEmail());
-        $stmt->bindValue(":password",$user->getPassword());
-        $stmt->bindValue(":ip",$user->getIp());
-        $stmt->bindValue(":userAgent",$user->getUserAgent());
-        $stmt->execute();
-        return $stmt->rowCount();
+        // define("INSERT_USER","
+        //             INSERT INTO `users`( `prenom`, `nom`, `email`, `password`, `ip`, `user_agent`) 
+        //             VALUES (:prenom,:nom,:email,:password,:ip,:userAgent)
+        // ");
+        // 'INSERT INTO users (prenom,nom,email,password,ip,userAgent) VALUES (:prenom,:nom,:email,:password,:ip,:userAgent)'
+        // $stmt = $this->db->prepare(INSERT_USER);
+        // $stmt->bindValue(":prenom",$user->getPrenom());
+        // $stmt->bindValue(":nom",$user->getNom());
+        // $stmt->bindValue(":email",$user->getEmail());
+        // $stmt->bindValue(":password",$user->getPassword());
+        // $stmt->bindValue(":ip",$user->getIp());
+        // $stmt->bindValue(":userAgent",$user->getUserAgent());
+        // $stmt->execute();
+        $this->persist($user);       
     }
 
     public function selectByEmail($email):User{

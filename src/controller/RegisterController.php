@@ -31,7 +31,7 @@ class RegisterController extends AbstractController{
                          ->setIp(password_hash($_SERVER['REMOTE_ADDR'],PASSWORD_DEFAULT))
                          ->setUserAgent(password_hash($_SERVER['HTTP_USER_AGENT'],PASSWORD_DEFAULT));
                     // insert user
-                    $rowCount = CRUDFactory::getUserCRUD()->insert($user);
+                    CRUDFactory::getUserCRUD()->insert($user);
                     // redirect to login
                     header("Location:login");
                 }catch(Exception $e){
