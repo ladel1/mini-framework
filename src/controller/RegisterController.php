@@ -4,7 +4,7 @@ namespace App\Controller;
 use App\Crud\CRUDFactory;
 use App\Model\User;
 use Exception;
-use Helpers\Validator;
+use Vendor\Codingx\Validator;
 
 class RegisterController extends AbstractController{
 

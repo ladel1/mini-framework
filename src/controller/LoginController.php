@@ -2,8 +2,8 @@
 namespace App\Controller;
 
 use App\Crud\CRUDFactory;
-use Helpers\Validator;
 use root\Session;
+use Vendor\Codingx\Validator;
 
 class LoginController extends AbstractController{
     

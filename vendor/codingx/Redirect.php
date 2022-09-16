@@ -1,5 +1,5 @@
 <?php 
-namespace Helpers;
+namespace Vendor\Codingx;
 
 trait Redirect{
 

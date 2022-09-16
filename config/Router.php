@@ -1,8 +1,8 @@
 <?php
 namespace Config;
 
-use Helpers\ReadFile;
-use Helpers\Redirect;
+use Vendor\Codingx\ReadFile;
+use Vendor\Codingx\Redirect;
 use Vendor\Exceptions\NotFoundException;
 
 class Router{

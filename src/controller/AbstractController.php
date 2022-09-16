@@ -1,8 +1,8 @@
 <?php 
 namespace App\Controller;
 use Config\Session;
-use Helpers\Exctractable;
-use Helpers\Redirect;
+use Vendor\Codingx\Exctractable;
+use Vendor\Codingx\Redirect;
 
 abstract class AbstractController {
     use Exctractable,Redirect;

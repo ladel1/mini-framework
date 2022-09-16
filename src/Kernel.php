@@ -2,7 +2,7 @@
 namespace App;
 use Config\Router;
 use Exception;
-use Helpers\LoadConfig;
+use Vendor\Codingx\LoadConfig;
 use Vendor\Exceptions\AbstractException;
 
 class Kernel{
