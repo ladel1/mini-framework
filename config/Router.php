@@ -3,6 +3,7 @@ namespace Config;
 
 use Vendor\Codingx\ReadFile;
 use Vendor\Codingx\Redirect;
+use Vendor\Codingx\Request;
 use Vendor\Exceptions\NotFoundException;
 
 class Router{
@@ -19,6 +20,10 @@ class Router{
 
     public static function route(){          
         $routes=ReadFile::readJson(ROUTES);
+        // https://stackoverflow.com/questions/27116940/dependency-injection-on-dynamically-created-objects
+        // $request = new Request;
+        // var_dump($request->get("qsdfsqdf"));
+        // die;
         $page = (isset($_GET["page"]))? $_GET["page"] : "";
         self::guardian($routes,$page);
         if(isset($routes[$page])){
