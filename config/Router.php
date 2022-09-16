@@ -15,7 +15,7 @@ use Vendor\Exceptions\NotFoundException;
             }
         }
 
-        public static function route(){            
+        public static function route(){          
             $routes=ReadFile::readJson(ROUTES);
             $page = (isset($_GET["page"]))? $_GET["page"] : "";
             self::guardian($routes,$page);

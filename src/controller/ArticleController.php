@@ -27,4 +27,15 @@
             }
         }
 
+
+        public function search($request){
+            if(isset($request["s"])){
+                $titre = htmlspecialchars($request["s"]);
+                $articles = CRUDFactory::getArticleCRUD()->selectByTitle($titre);
+                return $this->renderView("article/articles",compact("articles"),"Articles");
+            }else{
+                $this->redirect("articles");
+            }
+        }
+
     }

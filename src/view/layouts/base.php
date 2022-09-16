@@ -36,8 +36,8 @@
           <a class="nav-link" href="<?=CONTEXT_PATH?>login">Connexion</a>
         </li>          
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder=".ex Python" aria-label="Search">
+      <form class="d-flex" role="search" action="search">
+        <input class="form-control me-2" type="search" name="s" placeholder=".ex Python" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Rechercher</button>
       </form>
     </div>
