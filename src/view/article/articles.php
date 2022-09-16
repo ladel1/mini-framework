@@ -1,3 +1,4 @@
+<extends>layouts/base</extends>
 <h1>Articles</h1>
 
 <?php foreach($articles as $val): ?>

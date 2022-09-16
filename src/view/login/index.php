@@ -1,3 +1,4 @@
+<extends>layouts/base</extends>
 <css><link rel="stylesheet" href="static/css/style-login.css"></css>
 <!-- Login Form -->
 <div class="container">

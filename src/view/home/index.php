@@ -1,3 +1,4 @@
+<extends>layouts/base</extends>
 <css></css>
 <js><script>console.log("coucou")</script></js>
 <h1><?=$title?></h1>

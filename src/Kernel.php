@@ -1,6 +1,7 @@
 <?php 
 namespace App;
 use Config\Router;
+use Exception;
 use Helpers\LoadConfig;
 use Vendor\Exceptions\AbstractException;
 
@@ -12,9 +13,13 @@ class Kernel{
         try{
             $datas = Router::route();
             extract($datas);
-            require_once "src/view/base.php";
-        }catch(AbstractException $e){
-          
+            $layoutFile = "src/view/$layout.php";
+            if(file_exists($layoutFile)){
+                require_once "src/view/$layout.php";
+            }else{
+                throw new Exception("Layout not defined <extends>?</extends>");
+            }
+        }catch(AbstractException $e){          
             echo $e->load();
         }
     }

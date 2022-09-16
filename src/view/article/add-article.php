@@ -1,3 +1,4 @@
+<extends>layouts/base</extends>
 <div class="forms">
     <form action="add-article" method="post">
         <div class="form-control">
